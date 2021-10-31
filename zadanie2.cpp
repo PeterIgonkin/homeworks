@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <ctime>
 using namespace std;
 void cubes() {
@@ -26,7 +26,7 @@ int main() {
 	srand(time(NULL));
 	cubes();
 	unsigned int n;
-	cout << "Ââåäèòå ÷èñëî: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‡Ð¸ÑÐ»Ð¾: ";
 	cin >> n;
 	fibonacci(n);
 	return 0;
