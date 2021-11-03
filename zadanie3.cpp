@@ -40,7 +40,7 @@ int main() {
 	cout << "\n";
 	cout << "Введите число: " << endl;
 	cin >> k;
-	perevod(111111);
+	perevod(k);
 	cout << endl;
 	cout << "Введите число: " << endl;
 	cin >> r;
