@@ -33,8 +33,8 @@ int summa(int n) {
 	return sum;
 }
 void pairs() {
-	for (int i = 1; i < 10000; i++) {
-		for (int j = 1; j < 10000; j++) {
+	for (int i = 1; i < 9999; i++) {
+		for (int j = i + 1; j < 10000; j++) {
 			if ((i != j) && (summa(i) == j) && (summa(j) == i)) {
 				cout << "Дружественная пара: " << i << ' ' << j << endl;
 			}
