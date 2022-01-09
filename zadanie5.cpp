@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <Windows.h>
 #include <string>
 using namespace std;
@@ -17,12 +17,12 @@ void inputarr(t* mas, int n) {
 void palindrom(char *mas, int n) {
 	for (int i = 0; i < n / 2; i++) {
 		if (mas[i] != mas[n - i - 1]) {
-			cout << "Ýòî íå ïàëèíäðîì" << endl;
+			cout << "Ð­Ñ‚Ð¾ Ð½Ðµ Ð¿Ð°Ð»Ð¸Ð½Ð´Ñ€Ð¾Ð¼" << endl;
 			return;
 		}
 	}
 	printarr(mas, n);
-	cout << " - ïàëèíäðîì";
+	cout << " - Ð¿Ð°Ð»Ð¸Ð½Ð´Ñ€Ð¾Ð¼";
 }
 void sum(char mas[], int n) {
 	char a[100];
@@ -104,10 +104,10 @@ void counter(char mas1[], char mas2[], int size, int size1) {
 int main() {
 	setlocale(LC_ALL, "rus");
 	int n;
-	cout << "Ââåäèòå êîëè÷åñòâî áóêâ â ñëîâå:" << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»Ð¸Ñ‡ÐµÑÑ‚Ð²Ð¾ Ð±ÑƒÐºÐ² Ð² ÑÐ»Ð¾Ð²Ðµ:" << endl;
 	cin >> n;
 	char* mas = new char[n];
-	cout << "Ââåäèòå ñëîâî: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»Ð¾Ð²Ð¾: " << endl;
 	SetConsoleCP(1251);
 	inputarr(mas, n);
 	palindrom(mas, n);
@@ -115,30 +115,30 @@ int main() {
 	delete[] mas;
 	int size;
 	char arr[100];
-	cout << "Ââåäèòå ñóììó ÷èñåë: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÑƒÐ¼Ð¼Ñƒ Ñ‡Ð¸ÑÐµÐ»: ";
 	cin >> arr;
 	size = strlen(arr);
 	sum(arr, size);
 	int size1;
 	char arr1[100];
-	cout << "Ââåäèòå ÔÈÎ: " << endl;
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¤Ð˜Ðž: " << endl;
 	cin.ignore(32767, '\n');
 	cin.getline(arr1, 100);
 	size1 = strlen(arr1);
 	fio(arr1, size1);
 	char arr2[100];
-	cout << "Ââåäèòå íàçâàíèå ôàéëà: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð°Ð·Ð²Ð°Ð½Ð¸Ðµ Ñ„Ð°Ð¹Ð»Ð°: ";
 	cin.getline(arr2, 100);
 	char arr3[10];
-	cout << endl << "Ââåäèòå íîâîå ðàñøèðåíèå: ";
+	cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð²Ð¾Ðµ Ñ€Ð°ÑÑˆÐ¸Ñ€ÐµÐ½Ð¸Ðµ: ";
 	cin.getline(arr3, 10);
 	nameChange(arr2, arr3);
 	char arr4[300];
-	cout << "Ââåäèòå òåêñò: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ‚ÐµÐºÑÑ‚: ";
 	cin.getline(arr4, 300);
 	int size2 = strlen(arr4);
 	char arr5[30];
-	cout << endl << "Ââåäèòå ñëîâî, êîòîðîå íóæíî ïîäñ÷èòàòü: ";
+	cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»Ð¾Ð²Ð¾, ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ðµ Ð½ÑƒÐ¶Ð½Ð¾ Ð¿Ð¾Ð´ÑÑ‡Ð¸Ñ‚Ð°Ñ‚ÑŒ: ";
 	cin.getline(arr5, 30);
 	int size3 = strlen(arr5);
 	counter(arr4, arr5, size2, size3);
