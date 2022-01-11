@@ -1,4 +1,4 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <ctime>
 using namespace std;
 void fill_array(int** mas, int n, int m) {
@@ -39,14 +39,14 @@ void raw_delete(int** mas, int n, int m) {
 			mas_new[i][j] = mas[i + (i >= i_raw)][j + (j >= j_raw)];
 		}
 	}
-	cout << "Ìàññèâ äî óäàëåíèÿ ñòðîêè è ñòîëáöà:" << endl;
+	cout << "ÐœÐ°ÑÑÐ¸Ð² Ð´Ð¾ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð¸ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð°:" << endl;
 	print_array(mas, n, m);
-	cout << "Ìàññèâ ïîñëå óäàëåíèÿ ñòðîêè è ñòîëáöà:" << endl;
+	cout << "ÐœÐ°ÑÑÐ¸Ð² Ð¿Ð¾ÑÐ»Ðµ ÑƒÐ´Ð°Ð»ÐµÐ½Ð¸Ñ ÑÑ‚Ñ€Ð¾ÐºÐ¸ Ð¸ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð°:" << endl;
 	print_array(mas_new, n - 1, m - 1);
 }
 void multiply_matrix(int **mas1, int **mas2, int n1, int m1, int n2, int m2 ) {
 	if (m1 != n2) {
-		cout << "Ïåðåìíîæåíèå ìàòðèö íåâîçìîæíî" << endl;
+		cout << "ÐŸÐµÑ€ÐµÐ¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ðµ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ† Ð½ÐµÐ²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾" << endl;
 		return;
 	}
 	else {
@@ -60,23 +60,23 @@ void multiply_matrix(int **mas1, int **mas2, int n1, int m1, int n2, int m2 ) {
 				}
 			}
 		}
-		cout << "Ïåðâàÿ ìàòðèöà:" << endl;
+		cout << "ÐŸÐµÑ€Ð²Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð°:" << endl;
 		print_array(mas1, n1, m1);
-		cout << "Âòîðàÿ ìàòðèöà:" << endl;
+		cout << "Ð’Ñ‚Ð¾Ñ€Ð°Ñ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ð°:" << endl;
 		print_array(mas2, n2, m2);
-		cout << "Ðåçóëüòàò ïåðåìíîæåíèÿ:" << endl;
+		cout << "Ð ÐµÐ·ÑƒÐ»ÑŒÑ‚Ð°Ñ‚ Ð¿ÐµÑ€ÐµÐ¼Ð½Ð¾Ð¶ÐµÐ½Ð¸Ñ:" << endl;
 		print_array(res, n1, m2);
 	}
 }
 void matrix_swap(int** mas, int n) {
-	cout << "Ìàòðèöà äî èçìåíåíèÿ:" << endl;
+	cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° Ð´Ð¾ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ñ:" << endl;
 	print_array(mas, n, n);
 	for (int i = 0; i < n - 1; i++) {
 		for (int j = 0; j < n - i - 1; j++) {
 			swap(mas[i][j], mas[n - j - 1][n - i - 1]);
 		}
 	}
-	cout << "Ìàòðèöà ïîñëå èçìåíåíèÿ:" << endl;
+	cout << "ÐœÐ°Ñ‚Ñ€Ð¸Ñ†Ð° Ð¿Ð¾ÑÐ»Ðµ Ð¸Ð·Ð¼ÐµÐ½ÐµÐ½Ð¸Ñ:" << endl;
 	print_array(mas, n, n);
 }
 int main() {
@@ -84,9 +84,9 @@ int main() {
 	srand(time(NULL));
 	int n;
 	int m;
-	cout << "Ââåäèòå êîë-âî ñòðîê: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ ÑÑ‚Ñ€Ð¾Ðº: ";
 	cin >> n;
-	cout << endl << "Ââåäèòå êîë-âî ñòîëáöîâ: ";
+	cout << endl << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð²: ";
 	cin >> m;
 	int** mas = new int* [n];
 	for (int i = 0; i < n; i++) mas[i] = new int[m];
@@ -94,9 +94,9 @@ int main() {
 	raw_delete(mas, n, m);
 	delete_array(mas, n);
 	int n1, m1, n2, m2;
-	cout << "Ââåäèòå êîë-âî ñòðîê è ñòîëáöîâ ïåðâîé ìàòðèöû: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ ÑÑ‚Ñ€Ð¾Ðº Ð¸ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð² Ð¿ÐµÑ€Ð²Ð¾Ð¹ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹: ";
 	cin >> n1 >> m1;
-	cout << "Ââåäèòå êîë-âî ñòðîê è ñòîëáöîâ âòîðîé ìàòðèöû: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÐºÐ¾Ð»-Ð²Ð¾ ÑÑ‚Ñ€Ð¾Ðº Ð¸ ÑÑ‚Ð¾Ð»Ð±Ñ†Ð¾Ð² Ð²Ñ‚Ð¾Ñ€Ð¾Ð¹ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹: ";
 	cin >> n2 >> m2;
 	int** mas1 = new int* [n1];
 	for (int i = 0; i < n; i++) mas1[i] = new int[m1];
@@ -108,7 +108,7 @@ int main() {
 	delete_array(mas1, n1);
 	delete_array(mas2, n2);
 	int size;
-	cout << "Ââåäèòå ðàçìåðíîñòü ìàòðèöû: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€Ð½Ð¾ÑÑ‚ÑŒ Ð¼Ð°Ñ‚Ñ€Ð¸Ñ†Ñ‹: ";
 	cin >> size;
 	int** matrix = new int* [size];
 	for (int i = 0; i < size; i++) matrix[i] = new int[size];
